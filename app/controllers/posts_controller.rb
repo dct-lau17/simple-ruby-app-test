@@ -1,15 +1,12 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  respond_to :html, :json, :xml
+  
+
 
   # GET /posts
   # GET /posts.json
   def index
     @posts = Post.all
-    respond_to do |format|
-      format.html
-      format.json { render :json => @posts }
-    end
   end
 
   # GET /posts/1
